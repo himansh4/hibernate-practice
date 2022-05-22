@@ -1,5 +1,6 @@
 package utils;
 
+import model.Address;
 import model.Instructor;
 import model.InstructorDetail;
 import model.Student;
@@ -15,6 +16,7 @@ public class HibernateUtils {
                             .addAnnotatedClass(Student.class)
                             .addAnnotatedClass(Instructor.class)
                             .addAnnotatedClass(InstructorDetail.class)
+                            .addAnnotatedClass(Address.class)
                             .buildSessionFactory();
         }
         return sessionFactory;
