@@ -8,7 +8,7 @@ import utils.HibernateUtils;
 
 import java.util.List;
 
-public class MainClassInstructorDetailDemo {
+public class OneToOneUnidirectionalDemo {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
         EntityManager entityManager = sessionFactory.createEntityManager();

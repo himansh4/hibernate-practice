@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.HibernateUtils;
 
-public class MainClassAddressDemo {
+public class OneToOneBidirectionalDemo {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
         EntityManager entityManager = sessionFactory.createEntityManager();

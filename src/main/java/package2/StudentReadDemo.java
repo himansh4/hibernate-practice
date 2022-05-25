@@ -30,11 +30,7 @@ public class StudentReadDemo {
             entityManager.getTransaction().begin();
             System.out.println("Retrieving dummy students");
             List<Student> students = (List<Student>) entityManager.createQuery("from Student").getResultList();
-            for (Student s : students) {
-                System.out.println(s);
-            }
-
-
+            students.forEach(System.out::println);
         } finally {
             sessionFactory.close();
         }
