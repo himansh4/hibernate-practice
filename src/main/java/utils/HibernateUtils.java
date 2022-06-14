@@ -1,9 +1,6 @@
 package utils;
 
-import model.Address;
-import model.Instructor;
-import model.InstructorDetail;
-import model.Student;
+import model.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -17,6 +14,7 @@ public class HibernateUtils {
                             .addAnnotatedClass(Instructor.class)
                             .addAnnotatedClass(InstructorDetail.class)
                             .addAnnotatedClass(Address.class)
+                            .addAnnotatedClass(Course.class)
                             .buildSessionFactory();
         }
         return sessionFactory;

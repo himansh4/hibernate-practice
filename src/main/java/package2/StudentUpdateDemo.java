@@ -3,17 +3,15 @@ package package2;
 import jakarta.persistence.EntityManager;
 import model.Student;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import package2.utils.StudentUtils;
 import utils.HibernateUtils;
-
-import java.util.List;
 
 public class StudentUpdateDemo {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
         EntityManager entityManager = sessionFactory.createEntityManager();
         try {
+            // define and persist student object
             Student tempStudent = new Student("Bruce", "Wayne", "bruce@email.com");
             entityManager.getTransaction().begin();
             entityManager.persist(tempStudent);
